@@ -20,8 +20,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <Header title="Turcotrônicos" subtitle="A melhor loja para sua vida digital!" totalProducts="Total de Podutos: ´${sla}"/>
-      <body className={font.variable}>{children}</body>
+      <body className={font.variable}>
+        <Header 
+        title="Turcotrônicos" 
+        subtitle="A melhor loja para sua vida digital!" 
+        totalProducts="Total de produtos: `${sla}`"/>
+        {children}
+      </body>
     </html>
   );
 }
