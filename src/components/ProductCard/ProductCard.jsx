@@ -1,5 +1,6 @@
 import styles from './ProductCard.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProductCard({ title, image, description, price }) {
     return (
@@ -10,7 +11,9 @@ export default function ProductCard({ title, image, description, price }) {
             )}
             <p className={styles.description}>{description}</p>
             <p className={styles.price}>R$ {price.toFixed(2)}</p>
-            <button className={styles.button}>Comprar</button>
+            <Link href="/buy">
+                <button className={styles.button}>Comprar</button>
+            </Link>
         </div>
     );
 }

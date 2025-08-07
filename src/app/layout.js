@@ -1,7 +1,8 @@
 import React from "react";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "../components/Header/Header"; // Importando o componente Header
+import Header from "../components/Header/Header";
+import { productsData } from "../data/products";
 
 const font = Roboto({
   variable: "--font",
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
         <Header 
         title="Turcotrônicos" 
         subtitle="A melhor loja para sua vida digital!" 
-        totalProducts="Total de produtos: `${sla}`"/>
+        totalProducts={`Total de produtos: ${productsData.length}`}/>
         {children}
       </body>
     </html>
